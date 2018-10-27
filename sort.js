@@ -14,4 +14,41 @@ function bubbleSort(arr){
         return arr;
 }
 
-console.log(bubbleSort([-1,4,2,8,6,0,1]));
+function selectionSort(arr){
+    for(let i = 0; i<arr.length; ++i){
+        let min = Infinity;
+        let minIndex = null;
+        //get min
+        for(let j = i; j<arr.length; ++j){
+            if(arr[j]< min){
+                minIndex = j;  
+                min = arr[j];
+            }
+        }
+        //swap
+        let temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+    return arr;
+}
+
+
+function insertionSort(arr){
+    for(let i = 1; i < arr.length; ++i){
+        let key = i;
+        let j = i;
+        while(j >= 0 && arr[key] < arr[j-1]){
+            --j;
+            let temp = arr[key];
+            arr[key] = arr[j];
+            arr[j] = temp;
+            --key;
+            
+        }
+       
+    }
+        return arr;
+}
+
+console.log('insertion sort',insertionSort([-1,9,2,8,6,10,0,5]));
