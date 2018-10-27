@@ -51,4 +51,4 @@ function insertionSort(arr){
         return arr;
 }
 
-console.log('insertion sort',insertionSort([-1,9,2,8,6,10,0,5]));
+//console.log('insertion sort',insertionSort([-1,9,2,8,6,10,0,5]));
