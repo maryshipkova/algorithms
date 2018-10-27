@@ -51,4 +51,4 @@ class LinkedList {
 
 let list = new LinkedList([1, 2, 3, 4]);
 list.revert();
-console.log(list.toString());
+// console.log(list.toString());
